@@ -16,14 +16,14 @@ int main()
     cin>>n;
 
     int i = 1;
-    // char value = 'A'; 
     while(i<=n)
     {
         int j = 1;
+        char result = 'A' + n - i;
         while (j<=i)        
         {
-            cout<<char('A' + i + j - 2)<<" ";
-            // value++;
+            cout<<char(result)<<" ";
+            result++;
             j++;
         }
         i++;
