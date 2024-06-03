@@ -1,9 +1,8 @@
 /*
-A
-B C
-C D E
-D E F G
-E F G H I
+D
+C D
+B C D
+A B C D
 */
 
 #include<iostream>
