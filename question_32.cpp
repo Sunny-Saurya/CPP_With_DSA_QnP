@@ -14,15 +14,9 @@ int intersectionArray(int arr[], int brr[], int n, int m)
         {
            cout << arr[i] << " ";
         }
-        else 
-        {
-            flag = 1;
-        }
     }
-    if(flag == 1)
-    {
-        cout << "No, interesection element ";
-    }
+    return -1;
+
 }
 
 int main()
