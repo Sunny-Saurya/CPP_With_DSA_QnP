@@ -33,6 +33,22 @@ long long int sqrtNum(int key)
     return ans;
 }
 
+double morePrecision(int key, int precision, int tempSol)
+{
+    double factor = 1;
+    double ans = tempSol;
+
+    for(int i = 0; i<precision; i++)
+    {
+        factor = factor /10;
+
+        for(double j = ans ; j*j < key; j = j+factor)
+        {
+            ans = j;
+        }
+    }
+    return ans;
+}
 int main()
 {
 
@@ -40,6 +56,6 @@ int main()
     cout << "Enter any key : " << " ";
     cin >> key;
 
-    int ans = sqrtNum(key);
-    cout << "The sqrt of given number is : " << ans << " ";
+    int tempSol = sqrtNum(key);
+    cout << "The square root of given number is : " << morePrecision(key, 3, tempSol) << " ";
 }
