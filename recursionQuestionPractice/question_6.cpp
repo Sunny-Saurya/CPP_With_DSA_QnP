@@ -1,39 +1,30 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
 using namespace std;
 
-void decimalToBinary(int n)
+int decimalToBinary(int n)
 {
-    vector<int> binary;
-
-    while (n > 0)
+    if(n == 0)
     {
-        binary.push_back(n % 2);
-        n = n / 2;
+        return 0 ;
     }
-
-    // Print the binary number in reverse order
-    for (int i = binary.size() - 1; i >= 0; i--)
-    {
-        cout << binary[i];
-    }
-    cout << endl;
+    
+    int binary =  (n % 2) + 10 * (decimalToBinary(n/2));
+    return binary;
 }
 
 int main()
 {
     int decimalNumber;
-    cout << "Enter a decimal number: ";
+    cout << "Enter your decimal number : " << " ";
     cin >> decimalNumber;
 
-    if (decimalNumber < 0)
+    if(decimalNumber < 0)
     {
-        cout << "Please enter a non-negative number." << endl;
-        return 1;
+        cout << "Enter a valid decimal number (non - nagetive number) : " << " ";
     }
 
-    cout << "Binary representation: ";
-    decimalToBinary(decimalNumber);
-
-    return 0;
+    else
+    {
+        cout << "Binary digit is = " << decimalToBinary(decimalNumber);
+    }
 }
