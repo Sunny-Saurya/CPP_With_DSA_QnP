@@ -10,7 +10,7 @@ void allPrimeTillNumber(int n, vector<int>&ans){
 
     for(int i = 2; i < n; i++){
         if(primes[i] == 1){
-            for(int j = 2 * i; j < n; j += i){
+            for(int j = i* i; j < n; j += i){
                 primes[j] = 0;
             }
         }
